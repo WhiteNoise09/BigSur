@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 24px 1fr;
+    background-image: url('../assets/images/wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgba(0 0 0 / 10%);
+}
+
+header #global-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    font-size: 0.8em;
+    color: white;
+    line-height: 24px;
+}
+
+header #global-menu li:nth-child(1) {
+    background-color: white;
+    padding-inline: 5px;
+}
+
+header #global-menu li:nth-child(2) {
+    font-weight: bold;
+}
+
+header #global-menu li {
+    margin-left: 23px;
+}
+
+main {
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav #dock {
+    border: 1px solid hsla(160, 60%, 20%, .8);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(300px) brightness(110%);
+
+    position: fixed;
+    justify-content: center;
+    bottom: 5px;
+    height: 76px;
+    display: flex;
+    border-radius: 20px;
+    padding-inline: 2px;
+}
+
+nav #dock .app {
+    height: 100%;
+    width: 66px;
+    display: grid;
+    grid-template-rows: 1fr 50px 1.5fr;
+    justify-content: center;
+}
+
+nav hr {
+    height: 75%;
+    border-color: #111111;
+    margin-inline: 15px;
+}
+
+nav #dock .app .icon {
+    width: 50px;
+    grid-row: 2;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+nav #dock .app.active::after {
+    width: 5px;
+    height: 5px;
+    content: " ";
+    margin: auto;
+    position: relative;
+    top: 66px;
+    border-radius: 5px;
+    background-color: #aaaaaa;
+}
