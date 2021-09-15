@@ -48,7 +48,8 @@ nav {
 nav #dock {
     border: 1px solid hsla(160, 60%, 20%, .8);
 
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(300px) brightness(110%);
     -webkit-backdrop-filter: blur(300px) brightness(110%);
 
     position: fixed;
